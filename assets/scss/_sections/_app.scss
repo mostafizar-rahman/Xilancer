@@ -1,0 +1,86 @@
+.app {
+    .row {
+        row-gap: 40px;
+    }
+
+    &__card {
+        position: relative;
+        padding-left: 24px;
+        padding-right: 29px;
+        color: var(--white);
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        column-gap: 8px;
+        row-gap: 20px;
+
+        @include breakpoint(xxl) {
+            align-items: center;
+        }
+
+        @include breakpoint(md) {
+            flex-direction: column-reverse;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            border-radius: 24px;
+            width: 100%;
+            height: calc(100% - 91px);
+            z-index: -1;
+
+            @include breakpoint(xxl) {
+                height: 100%;
+            }
+
+            @include breakpoint(md) {
+                height: calc(100% - 91px);
+            }
+        }
+
+        &-content {
+            padding-bottom: 65px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @include breakpoint(xxl) {
+                padding-bottom: 10px;
+            }
+
+            @include breakpoint(md) {
+                text-align: center;
+
+            }
+
+            .btn-group {
+                @include flex;
+                flex-wrap: wrap;
+                gap: 16px;
+
+                @include breakpoint(md) {
+                    justify-content: center
+                }
+            }
+        }
+
+        &-img-group {
+            img {
+                @include breakpoint(xxl) {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    &__card_2 {
+        &::after {
+            background-color: #007456
+        }
+    }
+}

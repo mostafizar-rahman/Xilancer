@@ -1,0 +1,102 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 21px 0;
+    border-bottom: 1px solid #ECEDEF;
+
+    .container {
+        @include justify-between;
+
+        @media(min-width:1400px) {
+            max-width: 1620px;
+
+        }
+    }
+
+    nav {
+        @include breakpoint(xl) {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            background-color: var(--white);
+            min-height: 100vh;
+            min-width: 320px;
+            z-index: 999;
+        }
+    }
+
+    .navigation {
+        @include flex;
+        gap: 40px;
+
+        @include breakpoint(xl) {
+            flex-direction: column;
+            justify-content: start;
+            align-items: self-start;
+            padding: 25px 40px;
+            gap: 0px
+        }
+
+        &__item {
+            a {
+                @include flex;
+                gap: 4px;
+                transition: all 0.5s;
+                padding: 7px 0;
+            }
+
+            &:hover>a {
+                color: var(--primary);
+            }
+
+            @media(min-width:1200px) {
+                &:hover .navigation__dropdown {
+                    display: block;
+                }
+            }
+        }
+
+
+
+        &__dropdown {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 150px;
+            padding: 12px 0;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+                rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+
+            @include breakpoint(xl) {
+                position: relative;
+                box-shadow: none;
+                padding: 0px 0;
+            }
+
+            &-item {
+                a {
+                    padding: 2.5px 20px;
+                    display: inline-block;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    &__buttons {
+        @include flex;
+        gap: 12px;
+
+        a {
+            max-height: 44px;
+        }
+    }
+}

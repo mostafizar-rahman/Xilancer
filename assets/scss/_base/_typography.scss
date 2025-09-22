@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: var(--blue-800);
+  line-height: 150%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+// headings
+h1 {
+  font-size: 72px;
+  line-height: 111.111%;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 125%;
+  margin-bottom: 0;
+
+  @include breakpoint(xxl) {
+    font-size: 52px;
+  }
+
+  @include breakpoint(xl) {
+    font-size: 45px;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 38px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-size: 48px;
+  line-height: 125%;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 36px;
+  line-height: 122.222%;
+  margin-bottom: 0;
+
+  @include breakpoint(lg) {
+    font-size: 30px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 26px;
+  }
+}
+
+h5 {
+  font-size: 28px;
+  line-height: 128.571%;
+  margin-bottom: 0;
+
+  @include breakpoint(lg) {
+    font-size: 26px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 24px;
+  }
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 133.333%;
+  margin-bottom: 0;
+
+  @include breakpoint(lg) {
+    font-size: 22px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 20px;
+  }
+}
+
+// paragraph
+p {
+  margin-bottom: 0;
+}
+
+.p2 {
+  font-size: 18px;
+  line-height: 150%;
+
+  @include breakpoint(lg) {
+    font-size: 16px;
+  }
+}
+
+.p3 {
+  font-size: 20px;
+  line-height: 140%;
+
+  @include breakpoint(lg) {
+    font-size: 18px;
+  }
+}
+
+// font weight
+.font-400 {
+  font-weight: 400;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-700 {
+  font-weight: 700;
+}

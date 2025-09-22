@@ -1,0 +1,45 @@
+.price {
+    &__card {
+        border-radius: 12px;
+        border: 1px solid var(--blue-100);
+        background: var(--white);
+        padding: 24px;
+
+        &-header {
+            .price {
+                @include flex;
+                margin-top: 12px;
+
+                h5,
+                p {
+                    color: var(--blue-500);
+                }
+            }
+
+            p {
+                &:last-child {
+                    color: var(--blue-500);
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        &-body {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                li {
+                    @include flex;
+                    gap: 8px;
+                    color: var(--blue-600);
+
+                    svg {
+                        color: #FA8C00;
+                    }
+                }
+            }
+        }
+    }
+}

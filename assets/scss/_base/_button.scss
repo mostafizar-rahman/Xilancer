@@ -1,0 +1,53 @@
+button{
+  border: none;
+  background-color: transparent;
+}
+.btn-default {
+  padding: 15px 23px;
+  border-radius: 8px;
+  background-color: #007456;
+  color: var(--white);
+  font-weight: 500;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #007456;
+  transition: all 0.5s;
+
+  @include breakpoint(lg) {
+    padding: 12px 20px;
+  }
+
+  &:hover {
+    color: #007456;
+    background-color: transparent;
+  }
+}
+
+.btn-lg {
+  @extend .btn-default;
+  padding: 9px 17px;
+
+  @include breakpoint(lg) {
+    padding: 8px 16px;
+  }
+}
+
+// .btn-sm {
+//   @extend .btn-default;
+// }
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #007456;
+  color: #007456;
+
+  &:hover {
+    color: var(--white);
+    background-color: #007456;
+  }
+}
+
+.btn-rounded-full {
+  border-radius: 500px;
+}

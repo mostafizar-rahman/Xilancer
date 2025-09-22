@@ -1,0 +1,40 @@
+.categories {
+    .row {
+        row-gap: 30px;
+    }
+
+    &__card {
+        padding: 24px;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.08);
+
+        &-icon {
+            @include justify-center;
+            width: 40px;
+            height: 40px;
+            background-color: #0074561A;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        &-link:hover {
+            color: var(--primary);
+            transition: all 0.5s;
+        }
+
+        &-description {
+            display: block;
+            margin-top: 8px;
+            color: var(--blue-500);
+            line-height: 142.857%;
+        }
+
+        &-jobs {
+            display: block;
+            margin-top: 12px;
+            line-height: 142.857%;
+            color: var(--blue-800);
+        }
+    }
+}

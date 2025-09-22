@@ -1,0 +1,274 @@
+.services {
+    background-color: #0074560D;
+
+    &__tabs {
+        @include flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        li {
+            button {
+                @include justify-center;
+                max-height: 44px;
+                border-radius: 8px;
+                border: 1px solid rgba(65, 125, 110, 0.20);
+                padding: 10px 18px;
+                border-radius: 8px;
+                font-weight: 500;
+                cursor: pointer;
+                cursor: var(--blue-800);
+                transition: all 0.5s;
+
+                &:hover {
+                    color: #007456;
+                    background-color: var(--white);
+                }
+            }
+        }
+
+        .active {
+            color: #007456;
+            background-color: var(--white);
+        }
+    }
+
+    // card
+    &__card {
+        background-color: var(--white);
+        border-radius: 16px;
+        border: 1px solid rgba(27, 33, 41, 0.10);
+        padding: 16px;
+
+        &-header {
+            position: relative;
+
+            .heart {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                width: 36px;
+                height: 36px;
+                background-color: var(--white);
+                color: var(--blue-600);
+                border-radius: 20px;
+                @include justify-center;
+                border: none;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        &-body {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .category {
+                color: var(--blue-500);
+                transition: all 0.5s;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+
+            .title {
+                a {
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }
+
+            .rating {
+                svg {
+                    color: #FFB21A;
+                }
+
+                p {
+                    margin-left: 2px;
+                }
+
+                small {
+                    margin-left: 4px;
+                    color: var(--blue-500);
+                }
+            }
+
+            hr {
+                margin: 0;
+                border-top: 1px solid rgba(27, 33, 41, 0.10);
+                opacity: 1;
+            }
+        }
+
+        &-footer {
+            @include justify-between;
+            margin-top: 12px;
+
+            .user__info {
+                @include flex;
+                gap: 8px;
+
+                &-img {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 100%;
+                    flex-shrink: 0;
+                }
+
+                &-name {
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+
+                .active-status {
+                    position: absolute;
+                    top: 25px;
+                    left: 26px;
+                    display: flex;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                color: var(--blue-500);
+
+                strong {
+                    font-size: 16px;
+                    color: var(--blue-800);
+                }
+            }
+        }
+    }
+
+
+    // trending services
+    &__trending {
+        .navigation {
+            width: 56px;
+            height: 56px;
+            background-color: var(--white);
+            border-radius: 28px;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+            @include justify-center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            transition: all 0.5s;
+
+            @include breakpoint(sm) {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:hover {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+        }
+
+        .swiper-prev {
+            left: -28px;
+
+            @include breakpoint(sm) {
+                left: -10px;
+            }
+        }
+
+        .swiper-next {
+            right: -28px;
+
+            @include breakpoint(sm) {
+                right: -10px;
+            }
+        }
+    }
+
+    // service by categories
+    &__categories {
+
+        &-card {
+            border-radius: 12px;
+            color: var(--white);
+            position: relative;
+            display: block;
+
+
+            &-img-group {
+                transition: all 0.5s;
+                overflow: hidden;
+                border-radius: 12px;
+
+
+                img {
+                    border-radius: 12px;
+                    transition: all 0.5s;
+                }
+
+                &:hover img {
+                    transform: scale(1.05);
+                }
+            }
+
+            &-content {
+                padding: 25px 24px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+
+        .navigation {
+            width: 56px;
+            height: 56px;
+            background-color: var(--white);
+            border-radius: 28px;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+            @include justify-center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            transition: all 0.5s;
+
+            @include breakpoint(sm) {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:hover {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+        }
+
+        .swiper-prev {
+            left: -28px;
+
+            @include breakpoint(sm) {
+                left: -10px;
+            }
+        }
+
+        .swiper-next {
+            right: -28px;
+
+            @include breakpoint(sm) {
+                right: -10px;
+            }
+        }
+    }
+
+}

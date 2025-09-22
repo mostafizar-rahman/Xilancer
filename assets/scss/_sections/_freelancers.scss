@@ -1,0 +1,103 @@
+.freelancers {
+    &__card {
+        border-radius: 12px;
+        border: 1px solid var(--blue-100);
+        background: var(--white);
+        padding: 32px;
+
+        &-user {
+            @include flex;
+            gap: 12px;
+
+            @include breakpoint(xxl) {
+                align-items: self-start;
+            }
+
+            .user-img {
+                .active-status {
+                    position: absolute;
+                    top: 61px;
+                    left: 63px;
+                    display: flex;
+                }
+            }
+
+            .user-name-group {
+                @include flex;
+                flex-wrap: wrap;
+                row-gap: 8px;
+               
+
+                .user-name {
+                    margin-right: 10px;
+                }
+
+                .user-badge {
+                    // display: inline-block;
+                    // width: 100%;
+                    border-radius: 100px;
+                    background: rgba(0, 116, 86, 0.15);
+                    padding: 4px 6px;
+                    color: #007456;
+                    font-weight: 500;
+                    margin-left: 16px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -16px;
+                        width: 1px;
+                        height: 20px;
+                        background: var(--blue-200);
+                    }
+                }
+
+            }
+
+            .rating {
+                margin-top: 6px;
+                margin-bottom: 6px;
+
+                svg {
+                    color: var(--primary);
+                    margin-right: 2px;
+                }
+            }
+        }
+
+        &-skills {
+            @include flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+                padding: 6px 8px;
+                border-radius: 8px;
+                background: var(--blue-50);
+                font-size: 14px;
+                color: var(--blue-600);
+                line-height: 142.857%;
+                font-family: "Inter", sans-serif;
+
+                &:last-child {
+                    font-weight: 500;
+                    background-color: transparent;
+                    color: var(--blue-800);
+                }
+            }
+        }
+
+        &-location {
+            @include justify-between;
+
+            span {
+                display: block;
+                color: var(--blue-500);
+                margin-top: 4px;
+            }
+        }
+    }
+}

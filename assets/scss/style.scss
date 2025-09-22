@@ -1,0 +1,28 @@
+//bootstrap
+@import '../css/bootstrap.min.css';
+
+@import './_abstracts/_variables';
+
+@import './_abstracts/_maxin';
+
+@import './_base/_typography';
+
+@import './_base/_spacing';
+
+@import './_base/_container';
+
+@import './_base/_button';
+@import './_base/_animations';
+
+@import './_sections/_header';
+@import './_sections/_hero';
+@import './_sections/_categories';
+@import './_sections/_services';
+@import './_sections/_jobs';
+@import './_sections/_choose';
+@import './_sections/_testimonials';
+@import './_sections/_app';
+@import './_sections/_price';
+@import './_sections/_freelancers';
+@import './_sections/_join-area';
+@import './_sections/_footer';

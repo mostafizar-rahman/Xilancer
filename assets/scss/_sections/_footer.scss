@@ -1,0 +1,136 @@
+.footer {
+    background-color: #000000F5;
+    padding-bottom: 42px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 148px 197px 164px 353px;
+        justify-content: space-between;
+        column-gap: 25px;
+        row-gap: 40px;
+
+        @include breakpoint(xl) {
+            grid-template-columns: 18% 22% 20% auto;
+        }
+
+        @include breakpoint(lg) {
+            grid-template-columns: 40% auto;
+        }
+
+        @include breakpoint(sm) {
+            grid-template-columns: 1fr;
+        }
+
+        h6 {
+            color: var(--white);
+            padding-bottom: 32px;
+
+            @include breakpoint(lg) {
+                padding-bottom: 20px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            li {
+                a {
+                    color: var(--blue-100);
+                    font-size: 18px;
+                    transition: all 0.5s;
+
+                    @include breakpoint(sm) {
+                        font-size: 16px;
+                    }
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+
+        &-subscribe {
+            p {
+                color: var(--white);
+            }
+
+            .input__group {
+                margin-top: 16px;
+                max-height: 56px;
+
+                input {
+                    height: 56px;
+                    width: 100%;
+                    background-color: #242B36;
+                    border-radius: 8px;
+                    outline: none;
+                    box-shadow: none;
+                    padding: 16px;
+                    padding-right: 65px;
+                    color: var(--blue-100);
+                    border: none;
+
+                    &::placeholder {
+                        color: var(--blue-100);
+                    }
+                }
+
+                button {
+                    border: none;
+                    position: absolute;
+                    right: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: var(--blue-50);
+                    border-radius: 10px;
+                    @include justify-center;
+                    width: 52px;
+                    height: 52px;
+                }
+            }
+        }
+
+    }
+
+    &__copyright {
+        margin-top: 126px;
+        padding-top: 42px;
+        border-top: 1px solid var(--blue-500);
+        @include justify-between;
+        column-gap: 10px;
+        row-gap: 20px;
+
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+
+        p {
+            color: var(--white)
+        }
+
+        ul {
+            @include flex;
+            gap: 12px;
+
+            li {
+                a {
+                    @include justify-center;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 4px;
+                    background-color: var(--white);
+                    color: var(--blue-800);
+                    transition: all 0.5s;
+
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
